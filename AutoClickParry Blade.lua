@@ -3,7 +3,7 @@ gui.ResetOnSpawn = false
 gui.Parent = game.CoreGui 
 
 local script = game:GetService("LocalScript")
-local FrameDrag = script.Draggable
+local Drag = script.Draggable
 
 local frame = Instance.new("Frame")
 frame.Position = UDim2.new(0, 10, 0, 10)
@@ -11,7 +11,7 @@ frame.Size = UDim2.new(0, 150, 0, 75)
 frame.BackgroundColor3 = Color3.new(0, 0, 0)
 frame.BorderSizePixel = 0
 frame.Parent = gui
-FrameDrag.Parent.Draggable = true
+Drag.Parent.Draggable = true
 
 local button = Instance.new("TextButton")
 button.Text = "True"
