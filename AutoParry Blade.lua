@@ -11,7 +11,7 @@ frame.Size = UDim2.new(0, 150, 0, 75)
 frame.BackgroundColor3 = Color3.new(0, 0, 0)
 frame.BorderSizePixel = 0
 frame.Parent = gui
-FrameDrag.Draggable = true
+FrameDrag.Parent.Draggable = true
 
 local button = Instance.new("TextButton")
 button.Text = "True"
