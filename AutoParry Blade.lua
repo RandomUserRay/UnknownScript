@@ -1,6 +1,7 @@
 local gui = Instance.new("ScreenGui")
 gui.ResetOnSpawn = false 
 gui.Parent = game.CoreGui 
+gui.Parent.Draggable = true
 
 local frame = Instance.new("Frame")
 frame.Position = UDim2.new(0, 10, 0, 10)
