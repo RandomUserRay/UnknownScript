@@ -3,7 +3,7 @@ gui.ResetOnSpawn = false
 gui.Parent = game.CoreGui 
 
 local script = game:GetService("LocalScript")
-local FrameDrag = script
+local FrameDrag = script.DraggableFrame
 
 local frame = Instance.new("Frame")
 frame.Position = UDim2.new(0, 10, 0, 10)
