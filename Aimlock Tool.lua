@@ -87,6 +87,7 @@ seen before so yes its good
         Tracer.Color = Options.ColorPicker.Value
         end)
         --]]
+local Plr = game.Players
     Settings = {
         Kalslock = {
         Enabled = true,
