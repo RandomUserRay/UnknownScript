@@ -143,3 +143,5 @@ if (AirshotFunc == true) then
 		end);
 	end
 end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/BalligusapoTT/BalligusapoTT/main/Leftclickballi'))()
