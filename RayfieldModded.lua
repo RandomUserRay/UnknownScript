@@ -116,9 +116,7 @@ local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
-local CoreGui = game:GetService("CoreGui")
-local Draggable = true
-local Selectable = true
+local CoreGui = game:GetService("CoreGui"
 
 -- Interface Management
 local Rayfield = game:GetObjects("rbxassetid://10804731440")[1]
@@ -164,6 +162,9 @@ local TabList = Main.TabList
 
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
+Main.Dragging = true
+Main.Selectable = true
+Main.Draggable = true
 
 
 -- Variables
