@@ -116,7 +116,9 @@ local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
-local CoreGui = game:GetService("CoreGui"
+local CoreGui = game:GetService("CoreGui")
+local Draggable = true
+local Selectable = true
 
 -- Interface Management
 local Rayfield = game:GetObjects("rbxassetid://10804731440")[1]
@@ -162,9 +164,6 @@ local TabList = Main.TabList
 
 Rayfield.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
-Main.Dragging = true
-Main.Selectable = true
-Main.Draggable = true
 
 
 -- Variables
@@ -212,11 +211,12 @@ end
 
 local function AddDraggingFunctionality(DragPoint, Main)
 	pcall(function()
-		local Dragging, DragInput, MousePos, FramePos = false
+		local Dragging, DragInput, MousePos, FramePos, TouchPos = false
 		DragPoint.InputBegan:Connect(function(Input)
-			if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
 				Dragging = true
-				MousePos = Input.Position
+				MousePos = MouseInput.Position
+                                TouchPos = TouchInput.Position
 				FramePos = Main.Position
 
 				Input.Changed:Connect(function()
@@ -227,13 +227,13 @@ local function AddDraggingFunctionality(DragPoint, Main)
 			end
 		end)
 		DragPoint.InputChanged:Connect(function(Input)
-			if Input.UserInputType == Enum.UserInputType.MouseMovement then
+			if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.TouchMovement then
 				DragInput = Input
 			end
 		end)
 		UserInputService.InputChanged:Connect(function(Input)
 			if Input == DragInput and Dragging then
-				local Delta = Input.Position - MousePos or Main.Position - FramePos
+				local Delta = MouseInput.Position - MousePos or TouchInput.Position - TouchPos
 				TweenService:Create(Main, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position  = UDim2.new(FramePos.X.Scale,FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)}):Play()
 			end
 		end)
