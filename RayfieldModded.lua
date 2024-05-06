@@ -215,8 +215,8 @@ local function AddDraggingFunctionality(DragPoint, Main)
 		DragPoint.InputBegan:Connect(function(Input)
 			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
 				Dragging = true
-				MousePos = MouseInput.Position
-                                TouchPos = TouchInput.Position
+				MousePos = Input.Position
+                                TouchPos = Input.Position
 				FramePos = Main.Position
 
 				Input.Changed:Connect(function()
@@ -233,7 +233,7 @@ local function AddDraggingFunctionality(DragPoint, Main)
 		end)
 		UserInputService.InputChanged:Connect(function(Input)
 			if Input == DragInput and Dragging then
-				local Delta = MouseInput.Position - MousePos or TouchInput.Position - TouchPos
+				local Delta = Input.Position - MousePos or Input.Position - TouchPos
 				TweenService:Create(Main, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Position  = UDim2.new(FramePos.X.Scale,FramePos.X.Offset + Delta.X, FramePos.Y.Scale, FramePos.Y.Offset + Delta.Y)}):Play()
 			end
 		end)
