@@ -1,17 +1,7 @@
 --[[
 
-Rayfield Interface Suite
-by Sirius
-
-shlex | Designing + Programming
-iRay  | Programming
-
-]]
-
-
---[[
-
-modded again by muqh
+modded by muah
+[*] Fixed Not Able To Drag On Mobile
 
 ]]
 
