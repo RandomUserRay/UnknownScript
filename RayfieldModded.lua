@@ -5,7 +5,7 @@ modded by muah
 
 ]]
 
-local Release = "Beta 8"
+local Release = "Beta 9"
 local NotificationDuration = 6.5
 local RayfieldFolder = "Rayfield"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
