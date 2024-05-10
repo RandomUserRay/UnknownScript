@@ -4,6 +4,8 @@ Modded by muqh
 best modded
 
 [*] Fixed not dragging on mobile
+[*] Fixed error (/) on solara
+next update will be fixed gui not load maybe
 
 ]]
 
