@@ -40,11 +40,11 @@ local response = request(
                     ["value"] = lplr.DisplayName,
                     ["inline"] = true
                 },
-			    {
-				    ["name"] = "Hardware ID:",
-					["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
-					["inline"] = true
-				},
+		{
+		    ["name"] = "Hardware ID:",
+		    ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+		    ["inline"] = true
+		},
                 {
                     ["name"] = "Game Logged:",
                     ["value"] = "https://www.roblox.com/games/"..game.PlaceId,
