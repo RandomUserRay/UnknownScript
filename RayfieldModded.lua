@@ -8,6 +8,8 @@ more fixes soon
 
 ]]
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomUserRay/UnknownScript/main/FixedScripts.lua"))()
+
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
 Notify({
