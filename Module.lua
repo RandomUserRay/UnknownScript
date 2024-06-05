@@ -1,4 +1,4 @@
-odulocal textChatService = game:GetService("TextChatService")
+local textChatService = game:GetService("TextChatService")
 local plr = game:GetService("Players")
 
 textChatService.OnIncomingMessage = function(message: TextChatMessage)
@@ -11,7 +11,7 @@ textChatService.OnIncomingMessage = function(message: TextChatMessage)
         
         if player.UserId == 5807600241 then
             
-            properties.PrefixText = "<font color='#00ffee'>[QPHub Developer]</font> " .. message.PrefixText
+            properties.PrefixText = "<font color='#00ffee'>[QPHub Dev]</font> " .. "<font color='#000000'>[Mommy Muqh]</font> " .. message.PrefixText
             
         end
         
