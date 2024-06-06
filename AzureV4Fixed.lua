@@ -1,3 +1,9 @@
+
+
+-- # all credits go to linemaster, ignore horrid source
+
+
+
 if (not LPH_OBFUSCATED) then
     LPH_NO_VIRTUALIZE = function(...) return (...) end;
     LPH_JIT_MAX = function(...) return (...) end;
@@ -1349,7 +1355,7 @@ function load()
 
     do
         --// UI
-        loadstring(game:HttpGet('https://pastebin.com/raw/7Tk5QM6R'))()
+        local Library = loadstring(game:HttpGet("https://rentry.co/oytemtig/raw"))()
         local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/addons/SaveManager.lua"))()
         local ThemeManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/caIIed/Linoria-Rewrite/main/Theme%20Manager.lua"))()
 
