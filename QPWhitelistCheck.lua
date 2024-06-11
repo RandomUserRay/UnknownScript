@@ -7,13 +7,13 @@ local succ, result = pcall(function()
 end)
 
 if succ and result[gethwid()] then
-    print("Whitelisted!")
+    print("✅ -- Whitelisted!")
 	
 	return
 end
 
 if not result[gethwid()] then
-     print("Not Whitelisted!")
+     print("⛔ -- Not Whitelisted!")
 
    return
 end
