@@ -13,7 +13,7 @@ if succ and result[gethwid()] then
 end
 
 if not result[gethwid()] then
-     print("⛔ -- Not Whitelisted!")
+     warn("⛔ -- Not Whitelisted!")
 
    return
 end
